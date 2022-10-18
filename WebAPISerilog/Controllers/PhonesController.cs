@@ -24,14 +24,14 @@ namespace WebAPISerilog.Controllers
         {
             try
             {                
-                _logger.LogInformation("This is just a log in Try block");
+                _logger.LogInformation("This is just a log entry for the try block");
                 throw new Exception("Error Happened");
                 return Ok(_db.Phones);
             }
             catch (Exception ex)
             {
                 _logger.LogInformation("Exception in Catch block: " + ex.Message);
-                return BadRequest("Sorry, we could not load the phones");
+                return BadRequest("Sorry, we could not load the data");
             }
         }
 
