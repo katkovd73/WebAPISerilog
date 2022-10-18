@@ -37,14 +37,14 @@ private readonly ILogger<PhonesController> _logger;
  } 
   
  Use _logger inside the catch block or anywhere else:
-  try
-            {                
-                _logger.LogInformation("This is just a log entry for the try block");
-                throw new Exception("Error Happened");
-                return Ok(_db.Phones);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogInformation("Exception in Catch block: " + ex.Message);
-                return BadRequest("Sorry, we could not load the data");
-            }
+ try
+ {                
+    _logger.LogInformation("This is just a log entry for the try block");
+    throw new Exception("Error Happened");
+    return Ok(_db.Phones);
+ }
+ catch (Exception ex)
+ {
+    _logger.LogInformation("Exception in Catch block: " + ex.Message);
+    return BadRequest("Sorry, we could not load the data");
+ }
