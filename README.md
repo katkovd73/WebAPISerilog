@@ -31,7 +31,7 @@ In controllers inject an instance of an Iloger
 
 private readonly ILogger<PhonesController> _logger;
   
- public PhonesController(ILogger<PhonesController> logger, dbcontext db)
+ public PhonesController(ILogger<PhonesController> logger)
  {
     _logger = logger;
  } 
