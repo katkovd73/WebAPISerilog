@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext -Connection name=dbConnectionString -Provider Microsoft.EntityFrameworkCore.SqlServer -DataAnnotations -UseDatabaseNames -OutputDir Models -Context dbcontext -Force
